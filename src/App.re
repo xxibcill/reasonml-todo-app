@@ -44,8 +44,8 @@ let make = () => {
 
     <div className=Styles.root>
         <Card>
-            { todos -> Belt.List.map((element,index) => <ListItem key=Belt.Int.toString(index) index data=element />) |> Array.of_list |> React.array}
-            // { todos |> Utils.mapListItem |> Array.of_list |> React.array}
+            // { todos -> Belt.List.map((element,index) => <ListItem key=Belt.Int.toString(index) index data=element />) |> Array.of_list |> React.array}
+            { todos |> Utils.mapListItem |> Array.of_list |> React.array}
             <h4 className=Styles.addTodosHeader >{"Add Todos" |> React.string}</h4>
             <form onSubmit={handleSubmit} >
                 <input
